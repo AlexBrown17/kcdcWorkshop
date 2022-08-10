@@ -1,0 +1,65 @@
+11:06:12.972 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+11:06:13.015 | V |                      | Passing value for IHazSolution.Solution (kcdcWorkshop.sln)
+11:06:13.024 | V |                      | InjectParameterValues.OnBuildCreated (100)
+11:06:13.032 | V |                      | HandleShellCompletion.OnBuildCreated (75)
+11:06:13.146 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+11:06:13.146 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+11:06:13.158 | V |                      | UpdateNotification.OnBuildCreated (10)
+11:06:13.158 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+11:06:13.162 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+11:06:13.163 | V |                      | HandleSingleFileExecution.OnBuildCreated (-50)
+11:06:13.163 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+11:06:13.185 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
+11:06:13.186 | V |                      | Telemetry.OnBuildInitialized (0)
+11:06:13.885 | V |                      | Sending BuildStarted telemetry event ...
+11:06:13.889 | V |                      |   build_components         = 
+11:06:13.889 | V |                      |   build_type               = Project
+11:06:13.889 | V |                      |   compile_time             = 4
+11:06:13.889 | V |                      |   config_generators        = 
+11:06:13.889 | V |                      |   host                     = Terminal
+11:06:13.889 | V |                      |   num_custom_components    = 21
+11:06:13.889 | V |                      |   num_custom_extensions    = 3
+11:06:13.889 | V |                      |   num_partitioned_targets  = 0
+11:06:13.889 | V |                      |   num_secrets              = 16
+11:06:13.889 | V |                      |   num_targets              = 13
+11:06:13.889 | V |                      |   os_architecture          = X64
+11:06:13.889 | V |                      |   os_platform              = Windows
+11:06:13.889 | V |                      |   target_framework         = .NETCoreApp,Version=v6.0
+11:06:13.889 | V |                      |   version_dotnet_sdk       = 6.0.400
+11:06:13.889 | V |                      |   version_nuke_common      = 6.1.2
+11:06:13.889 | V |                      |   version_nuke_global_tool = 6.1.2
+11:06:14.433 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+11:06:16.825 | W |                      | Could not inject value for Build.nerdbankVersioning
+System.Exception: Missing package reference/download.
+Run one of the following commands:
+  - nuke :add-package nbgv --version 3.5.109
+ ---> System.ArgumentException: Could not find package 'nbgv' using:
+ - Project assets file 'C:\Users\AlexanderBrown\workshop\kcdcWorkshop\build\obj\project.assets.json'
+ - NuGet packages config 'C:\Users\AlexanderBrown\workshop\kcdcWorkshop\build\_build.csproj'
+   at Nuke.Common.Assert.NotNull[T](T obj, String message, String argumentExpression) in /_/source/Nuke.Common/Assert.cs:line 61
+   at Nuke.Common.Tooling.ToolPathResolver.GetPackageDirectory(String[] packageIds, String version) in /_/source/Nuke.Common/Tooling/ToolPathResolver.cs:line 94
+   --- End of inner exception stack trace ---
+   at Nuke.Common.Assert.Fail(String message, Exception exception) in /_/source/Nuke.Common/Assert.cs:line 22
+   at Nuke.Common.Tooling.ToolPathResolver.GetPackageDirectory(String[] packageIds, String version) in /_/source/Nuke.Common/Tooling/ToolPathResolver.cs:line 154
+   at Nuke.Common.Tooling.ToolPathResolver.GetPackageExecutable(String packageId, String packageExecutable, String version, String framework) in /_/source/Nuke.Common/Tooling/ToolPathResolver.cs:line 41
+   at Nuke.Common.Tools.NerdbankGitVersioning.NerdbankGitVersioningTasks.get_NerdbankGitVersioningPath() in /_/source/Nuke.Common/Tools/NerdbankGitVersioning/NerdbankGitVersioning.Generated.cs:line 32
+   at Nuke.Common.Tools.NerdbankGitVersioning.NerdbankGitVersioningGetVersionSettings.get_ProcessToolPath() in /_/source/Nuke.Common/Tools/NerdbankGitVersioning/NerdbankGitVersioning.Generated.cs:line 467
+   at Nuke.Common.Tooling.ProcessTasks.StartProcess(ToolSettings toolSettings) in /_/source/Nuke.Common/Tooling/ProcessTasks.cs:line 55
+   at Nuke.Common.Tools.NerdbankGitVersioning.NerdbankGitVersioningTasks.NerdbankGitVersioningGetVersion(NerdbankGitVersioningGetVersionSettings toolSettings) in /_/source/Nuke.Common/Tools/NerdbankGitVersioning/NerdbankGitVersioning.Generated.cs:line 112
+   at Nuke.Common.Tools.NerdbankGitVersioning.NerdbankGitVersioningTasks.NerdbankGitVersioningGetVersion(Configure`1 configurator) in /_/source/Nuke.Common/Tools/NerdbankGitVersioning/NerdbankGitVersioning.Generated.cs:line 132
+   at Nuke.Common.Tools.NerdbankGitVersioning.NerdbankGitVersioningAttribute.GetValue(MemberInfo member, Object instance) in /_/source/Nuke.Common/Tools/NerdbankGitVersioning/NerdbankGitVersioningAttribute.cs:line 27
+   at Nuke.Common.ValueInjection.ValueInjectionAttributeBase.TryGetValue(MemberInfo member, Object instance) in /_/source/Nuke.Common/ValueInjection/ValueInjectionAttributeBase.cs:line 25
+11:06:16.850 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+11:06:16.857 | W |                      | Could not inject value for IHazGitRepository.GitRepository
+System.ArgumentException: Expected file to exist: C:\Users\AlexanderBrown\workshop\kcdcWorkshop\.git\refs/heads/master (Parameter 'headRefFile')
+   at Nuke.Common.Assert.FileExists(String path, String message, String argumentExpression) in /_/source/Nuke.Common/Assert.cs:line 166
+   at Nuke.Common.Git.GitRepository.GetCommitFromHead(String gitDirectory, String head) in /_/source/Nuke.Common/Git/GitRepository.cs:line 102
+   at Nuke.Common.Git.GitRepository.FromLocalDirectory(String directory) in /_/source/Nuke.Common/Git/GitRepository.cs:line 55
+   at Nuke.Common.Git.GitRepositoryAttribute.GetValue(MemberInfo member, Object instance) in /_/source/Nuke.Common/Git/GitRepositoryAttribute.cs:line 22
+   at Nuke.Common.ValueInjection.ValueInjectionAttributeBase.TryGetValue(MemberInfo member, Object instance) in /_/source/Nuke.Common/ValueInjection/ValueInjectionAttributeBase.cs:line 25
+11:06:16.860 | V |                      | Target-unrelated exception was thrown
+System.Exception: Member 'GitRepository' is required to be not null
+   at Nuke.Common.Assert.Fail(String message, Exception exception) in /_/source/Nuke.Common/Assert.cs:line 22
+   at Nuke.Common.Execution.RequirementService.ValidateRequirements(NukeBuild build, IReadOnlyCollection`1 scheduledTargets) in /_/source/Nuke.Common/Execution/RequirementService.cs:line 22
+   at Nuke.Common.Execution.BuildExecutor.Execute(NukeBuild build, IReadOnlyCollection`1 skippedTargets) in /_/source/Nuke.Common/Execution/BuildExecutor.cs:line 30
+   at Nuke.Common.Execution.BuildManager.Execute[T](Expression`1[] defaultTargetExpressions) in /_/source/Nuke.Common/Execution/BuildManager.cs:line 61

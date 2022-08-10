@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31611.283
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kcdcWorkshop", "kcdcWorkshop\kcdcWorkshop.csproj", "{EB5403E6-5723-402C-AFDA-669BC06DF8C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3302262-9609-411F-B632-B59886534BF0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{53416280-3F9E-48D1-9F12-742D7C34FCC5}"
+EndProject
+Global
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53416280-3F9E-48D1-9F12-742D7C34FCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53416280-3F9E-48D1-9F12-742D7C34FCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5403E6-5723-402C-AFDA-669BC06DF8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5403E6-5723-402C-AFDA-669BC06DF8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5403E6-5723-402C-AFDA-669BC06DF8C5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EB5403E6-5723-402C-AFDA-669BC06DF8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5403E6-5723-402C-AFDA-669BC06DF8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5403E6-5723-402C-AFDA-669BC06DF8C5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+EndGlobal
